@@ -1,7 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
-import WelcomeScreen from "./app/WelcomeScreen/welcomeScreen";
+import ViewImageScreen from "./app/Screens/viewImageScreen";
+import WelcomeScreen from "./app/Screens/welcomeScreen";
 
 export default function App() {
-  return <WelcomeScreen />;
+  return <ViewImageScreen />;
 }
