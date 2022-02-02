@@ -22,6 +22,7 @@ export default function App() {
     //     image={require("./app/assets/jacket.jpg")}
     //   />
     // </View>
-    <ListingDetailsScreen />
+    // <ListingDetailsScreen />
+    <ViewImageScreen />
   );
 }
