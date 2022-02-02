@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  ImageBackground,
-  Platform,
-} from "react-native";
+import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
 export default function AppText({ children }) {
@@ -26,15 +19,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "tomato",
-    ...Platform.select({
-      ios: {
-        fontSize: 60,
-        fontFamily: "Avenir",
-      },
-      android: {
-        fontSize: 38,
-        fontFamily: "Roboto",
-      },
-    }),
+    fontSize: 38,
+    fontFamily: "Roboto",
   },
 });
