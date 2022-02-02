@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontWeight: 500,
+    fontWeight: "500",
   },
   userContainer: {
     marginVertical: 40,
