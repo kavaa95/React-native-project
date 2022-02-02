@@ -14,7 +14,6 @@ export default function AppText({ children }) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{children}</Text>
-      <AntDesign name="mail" size={24} color="black" />
     </View>
   );
 }
