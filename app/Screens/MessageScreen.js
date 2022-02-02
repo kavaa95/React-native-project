@@ -10,7 +10,9 @@ import {
   Platform,
 } from "react-native";
 import ListItem from "../components/ListItem";
-import { Constants } from "expo-constants";
+import Constants from "expo-constants";
+import Screen from "../components/screen";
+
 const messages = [
   {
     id: 1,
@@ -28,7 +30,7 @@ const messages = [
 
 export default function MessageScreen() {
   return (
-    <SafeAreaView style={styles.screen}>
+    <Screen style={styles.screen}>
       <FlatList
         data={messages}
         keyExtractor={(message) => message.id.toString()}
@@ -40,12 +42,8 @@ export default function MessageScreen() {
           />
         )}
       />
-    </SafeAreaView>
+    </Screen>
   );
 }
 
-const styles = StyleSheet.create({
-  screen: {
-    paddingTop: Constants.StatusBarHeight,
-  },
-});
+const styles = StyleSheet.create({});
