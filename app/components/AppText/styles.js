@@ -1,10 +1,8 @@
 import { StyleSheet, Platform } from "react-native";
 const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-  },
   text: {
-    color: "tomato",
+    fontSize: 18,
+    fontWeight: "bold",
     ...Platform.select({
       ios: {
         fontSize: 20,
@@ -12,7 +10,6 @@ const styles = StyleSheet.create({
       },
       android: {
         fontSize: 30,
-        fontFamily: "Roboto",
       },
     }),
   },
