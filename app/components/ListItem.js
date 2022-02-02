@@ -1,18 +1,16 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
-import AppText from "./AppText";
-import ListingDetailsScreen from "../../Screens/ListingDetailsScreen";
-import AppText from "./AppText";
-function ListItem({ title }) {
+import AppText from "./AppText/AppText";
+import ListingDetailsScreen from "../Screens/ListingDetailsScreen";
+
+function ListItem({ title, subTitle, image }) {
   return (
     <View style={styles.container}>
-      {/* <Image source={image} style={styles.image} /> */}
-      {/* <View>
-        <AppText>{Title}</AppText>
+      <Image source={image} style={styles.image} />
+      <View>
+        <AppText>{title}</AppText>
         <AppText>{subTitle}</AppText>
-      </View> */}
-      {/* <AppText>{title}</AppText> */}
-      <Text>Hello</Text>
+      </View>
     </View>
   );
 }

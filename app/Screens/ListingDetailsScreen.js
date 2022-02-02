@@ -12,7 +12,7 @@ function ListingDetailsScreen(props) {
         <AppText style={styles.title}>Red Jacket for sale</AppText>
         <AppText style={styles.price}>$100</AppText>
         <ListItem
-          //   image={require("../assets/mosh.jpg")}
+          image={require("../assets/mosh.jpg")}
           title="Alex kavanagh"
           subTitle="5 sublisting"
         />
