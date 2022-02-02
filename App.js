@@ -6,6 +6,7 @@ import AppText from "./app/components/AppText/AppText";
 import AppButton from "./app/components/AppButton";
 import Card from "./app/components/Card";
 import ListingDetailsScreen from "./app/Screens/ListingDetailsScreen";
+import MessageScreen from "./app/Screens/MessageScreen";
 
 export default function App() {
   return (
@@ -23,6 +24,6 @@ export default function App() {
     //   />
     // </View>
     // <ListingDetailsScreen />
-    <ViewImageScreen />
+    <MessageScreen />
   );
 }
