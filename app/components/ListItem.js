@@ -8,7 +8,7 @@ import {
   TouchableHighlight,
   onPress,
 } from "react-native";
-import AppText from "./AppText/AppText";
+import AppText from "./AppText";
 import ListingDetailsScreen from "../Screens/ListingDetailsScreen";
 import colors from "../config/colors";
 import Swipeable from "react-native-gesture-handler/Swipeable";

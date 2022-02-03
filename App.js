@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
 import ViewImageScreen from "./app/Screens/viewImageScreen";
 import WelcomeScreen from "./app/Screens/welcomeScreen";
-import AppText from "./app/components/AppText/AppText";
+import AppText from "./app/components/AppText";
 import AppButton from "./app/components/AppButton";
 import Card from "./app/components/Card";
 import ListingDetailsScreen from "./app/Screens/ListingDetailsScreen";

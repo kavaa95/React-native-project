@@ -7,7 +7,7 @@ import {
   ImageBackground,
   Platform,
 } from "react-native";
-import styles from "./styles";
+import styles from "../config/styles";
 import { AntDesign } from "@expo/vector-icons";
 
 export default function AppText({ children, style }) {
