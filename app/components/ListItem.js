@@ -11,11 +11,11 @@ import {
 import AppText from "./AppText/AppText";
 import ListingDetailsScreen from "../Screens/ListingDetailsScreen";
 import colors from "../config/colors";
-import Swipeable from "react-native-gesture-handler/lib/typescript/components/Swipeable";
+import Swipeable from "react-native-gesture-handler/Swipeable";
 
-function ListItem({ title, subTitle, image, onPress }) {
+function ListItem({ title, subTitle, image, onPress, renderRightActions }) {
   return (
-    <Swipeable renderLeftActions={this.renderLeftActions}>
+    <Swipeable renderRightActions={renderRightActions}>
       <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
         <View style={styles.container}>
           <Image source={image} style={styles.image} />
