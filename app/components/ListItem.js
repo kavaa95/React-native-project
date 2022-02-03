@@ -11,18 +11,21 @@ import {
 import AppText from "./AppText/AppText";
 import ListingDetailsScreen from "../Screens/ListingDetailsScreen";
 import colors from "../config/colors";
+import Swipeable from "react-native-gesture-handler/lib/typescript/components/Swipeable";
 
 function ListItem({ title, subTitle, image, onPress }) {
   return (
-    <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
-      <View style={styles.container}>
-        <Image source={image} style={styles.image} />
-        <View>
-          <AppText style={styles.title}>{title}</AppText>
-          <AppText style={styles.subTitle}>{subTitle}</AppText>
+    <Swipeable renderLeftActions={this.renderLeftActions}>
+      <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
+        <View style={styles.container}>
+          <Image source={image} style={styles.image} />
+          <View>
+            <AppText style={styles.title}>{title}</AppText>
+            <AppText style={styles.subTitle}>{subTitle}</AppText>
+          </View>
         </View>
-      </View>
-    </TouchableHighlight>
+      </TouchableHighlight>
+    </Swipeable>
   );
 }
 const styles = StyleSheet.create({
