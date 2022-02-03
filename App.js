@@ -8,11 +8,8 @@ import Card from "./app/components/Card";
 import ListingDetailsScreen from "./app/Screens/ListingDetailsScreen";
 import MessageScreen from "./app/Screens/MessageScreen";
 import Screen from "./app/components/screen";
+import Icon from "./app/components/AppText/Icon";
 
 export default function App() {
-  return (
-    <Screen>
-      <Icon name="email" size={50} iconColor="white" />
-    </Screen>
-  );
+  return <Screen></Screen>;
 }
