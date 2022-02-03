@@ -8,9 +8,9 @@ import Card from "./app/components/Card";
 import ListingDetailsScreen from "./app/Screens/ListingDetailsScreen";
 import MessageScreen from "./app/Screens/MessageScreen";
 import Screen from "./app/components/screen";
-import Icon from "./app/components/AppText/Icon";
+import Icon from "./app/components/Icon";
 import ListItem from "./app/components/ListItem";
-import AccountScreen from "./app/components/AccountScreen";
+import AccountScreen from "./app/Screens/AccountScreen";
 
 export default function App() {
   return <AccountScreen />;
