@@ -9,11 +9,12 @@ import ListingDetailsScreen from "./app/Screens/ListingDetailsScreen";
 import MessageScreen from "./app/Screens/MessageScreen";
 import Screen from "./app/components/screen";
 import Icon from "./app/components/AppText/Icon";
+import ListItem from "./app/components/ListItem";
 
 export default function App() {
   return (
     <Screen>
-      <Icon name="email" size={100} iconColor="white" />
+      <ListItem title="My title" ImageComponent={<Icon name="email" />} />
     </Screen>
   );
 }
