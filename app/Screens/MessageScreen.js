@@ -10,7 +10,6 @@ import {
   Platform,
 } from "react-native";
 import ListItem from "../components/ListItem";
-import Constants from "expo-constants";
 import Screen from "../components/screen";
 import ListItemSeperator from "../components/ListItemSeperator";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
@@ -32,6 +31,7 @@ const InitialMessages = [
 
 export default function MessageScreen() {
   const [messages, setMessages] = useState(InitialMessages);
+  const [refreshing, setRefreshing] = useState(false);
 
   const handleDelete = (message) => {
     const newMessages = messages.filter((m) => m.id !== message.id);
@@ -55,6 +55,8 @@ export default function MessageScreen() {
           />
         )}
         ItemSeparatorComponent={ListItemSeperator}
+        refreshing={refreshing}
+        onRefresh={() => setMessages(InitialMessages)}
       />
     </Screen>
   );
