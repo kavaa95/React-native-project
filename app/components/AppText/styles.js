@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         fontFamily: "Avenir",
       },
       android: {
-        fontSize: 30,
+        fontSize: 20,
       },
     }),
   },

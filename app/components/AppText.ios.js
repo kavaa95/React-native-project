@@ -19,6 +19,6 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "tomato",
-    fontSize: 60,
+    fontSize: 40,
   },
 });

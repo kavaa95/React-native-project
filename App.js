@@ -10,11 +10,8 @@ import MessageScreen from "./app/Screens/MessageScreen";
 import Screen from "./app/components/screen";
 import Icon from "./app/components/AppText/Icon";
 import ListItem from "./app/components/ListItem";
+import AccountScreen from "./app/components/AccountScreen";
 
 export default function App() {
-  return (
-    <Screen>
-      <ListItem title="My title" ImageComponent={<Icon name="email" />} />
-    </Screen>
-  );
+  return <AccountScreen />;
 }
