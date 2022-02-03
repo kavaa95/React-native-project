@@ -7,13 +7,13 @@ import {
   ImageBackground,
   Platform,
 } from "react-native";
-import styles from "../config/styles";
+import Reusablestyles from "../config/styles";
 import { AntDesign } from "@expo/vector-icons";
 
 export default function AppText({ children, style }) {
   return (
     <View style={styles.container}>
-      <Text style={[styles.text, style]}>{children}</Text>
+      <Text style={[Reusablestyles.text, style]}>{children}</Text>
     </View>
   );
 }

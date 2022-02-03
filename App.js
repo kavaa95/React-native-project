@@ -20,20 +20,14 @@ import ListItem from "./app/components/ListItem";
 import AccountScreen from "./app/Screens/AccountScreen";
 import ListingsScreen from "./app/Screens/ListingsScreen";
 import React, { useState } from "react";
+import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
   const [fistName, setFirstname] = useState("");
   return (
     <Screen>
       <Text>{fistName}</Text>
-      <TextInput
-        onChangeText={(text) => setFirstname(text)}
-        placeholder="First Name"
-        style={{
-          borderBottomColor: "#ccc",
-          borderBottomWidth: 1,
-        }}
-      />
+      <AppTextInput placeholder="Username" icon="email" />
     </Screen>
   );
 }

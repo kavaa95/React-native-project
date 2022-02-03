@@ -1,18 +1,26 @@
 import { StyleSheet, Platform } from "react-native";
-const styles = StyleSheet.create({
+import React from "react";
+import colors from "./colors";
+const Reusablestyles = StyleSheet.create({
   text: {
     fontSize: 18,
 
     ...Platform.select({
       ios: {
         fontSize: 20,
-        fontFamily: "Avenir",
+        fontFamily: " ",
       },
       android: {
         fontSize: 20,
       },
     }),
   },
+
+  textInput: {
+    color: colors.dark,
+    fontSize: 18,
+    fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
+  },
 });
 
-export default styles;
+export default Reusablestyles;
