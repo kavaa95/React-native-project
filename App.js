@@ -1,5 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ImageBackground,
+  TextInput,
+} from "react-native";
 import ViewImageScreen from "./app/Screens/viewImageScreen";
 import WelcomeScreen from "./app/Screens/welcomeScreen";
 import AppText from "./app/components/AppText";
@@ -12,7 +19,21 @@ import Icon from "./app/components/Icon";
 import ListItem from "./app/components/ListItem";
 import AccountScreen from "./app/Screens/AccountScreen";
 import ListingsScreen from "./app/Screens/ListingsScreen";
+import React, { useState } from "react";
 
 export default function App() {
-  return <ListingsScreen />;
+  const [fistName, setFirstname] = useState("");
+  return (
+    <Screen>
+      <Text>{fistName}</Text>
+      <TextInput
+        onChangeText={(text) => setFirstname(text)}
+        placeholder="First Name"
+        style={{
+          borderBottomColor: "#ccc",
+          borderBottomWidth: 1,
+        }}
+      />
+    </Screen>
+  );
 }
