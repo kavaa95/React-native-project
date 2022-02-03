@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   SafeAreaView,
   View,
@@ -15,7 +15,7 @@ import Screen from "../components/screen";
 import ListItemSeperator from "../components/ListItemSeperator";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
 
-const messages = [
+const InitialMessages = [
   {
     id: 1,
     title: "T1",
@@ -31,6 +31,13 @@ const messages = [
 ];
 
 export default function MessageScreen() {
+  const [messages, setMessages] = useState(InitialMessages);
+
+  const handleDelete = (message) => {
+    const newMessages = messages.filter((m) => m.id !== message.id);
+    setMessages(newMessages);
+  };
+
   return (
     <Screen style={styles.screen}>
       <FlatList
@@ -42,7 +49,9 @@ export default function MessageScreen() {
             subTitle={item.description}
             image={item.image}
             onPress={() => console.log("Message selected", item)}
-            renderRightActions={ListItemDeleteAction}
+            renderRightActions={() => (
+              <ListItemDeleteAction onPress={() => handleDelete(item)} />
+            )}
           />
         )}
         ItemSeparatorComponent={ListItemSeperator}
