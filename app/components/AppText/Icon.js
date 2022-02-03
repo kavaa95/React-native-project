@@ -15,6 +15,8 @@ function Icon({
         height: size,
         borderRadius: size / 2,
         backgroundColor,
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <MaterialCommunityIcons name={name} color={iconColor} size={size * 0.5} />

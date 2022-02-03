@@ -11,5 +11,9 @@ import Screen from "./app/components/screen";
 import Icon from "./app/components/AppText/Icon";
 
 export default function App() {
-  return <Screen></Screen>;
+  return (
+    <Screen>
+      <Icon name="email" size={100} iconColor="white" />
+    </Screen>
+  );
 }
