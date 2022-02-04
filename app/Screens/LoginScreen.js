@@ -5,17 +5,14 @@ import AppTextInput from "../components/AppTextInput";
 import Screen from "../components/screen";
 import { Formik } from "formik";
 import AppText from "../components/AppText";
-import * as yup from "yup";
+import * as Yup from "yup";
 
-const ValidationSchema = yup.object().shape({
-  email: yup.string().required().email().label("Email"),
+const validationSchema = Yup.object().shape({
+  email: Yup.string().required().email().label("Email"),
   password: Yup.string()
     .required()
     .min(8, "Password is too short - should be 8 chars minimum.")
     .label("Password"),
-  createdOn: yup.date().default(function () {
-    return new Date();
-  }),
 });
 
 function LoginScreen(props) {
@@ -39,7 +36,7 @@ function LoginScreen(props) {
               keyboardType="email-address"
               textContentType="emailAddress"
             />
-            <AppText style={{ color: red }}>{errors.email}</AppText>
+            <AppText style={{ color: "red" }}>{errors.email}</AppText>
             <AppTextInput
               autoCapitalize="none"
               autoCorrect={false}
@@ -49,8 +46,8 @@ function LoginScreen(props) {
               secureTextEntry
               textContentType="Password"
             />
-            <AppText style={{ color: red }}>{errors.password}</AppText>
-            <AppButton title="Login" onPress={(onPress = { handleSubmit })} />
+            <AppText style={{ color: "red" }}>{errors.password}</AppText>
+            <AppButton title="Login" onPress={handleSubmit} />
           </>
         )}
       </Formik>
