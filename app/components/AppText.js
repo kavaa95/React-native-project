@@ -12,7 +12,7 @@ import { AntDesign } from "@expo/vector-icons";
 
 export default function AppText({ children, style }) {
   return (
-    <View style={styles.container}>
+    <View>
       <Text style={[Reusablestyles.text, style]}>{children}</Text>
     </View>
   );

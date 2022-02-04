@@ -8,7 +8,6 @@ const Reusablestyles = StyleSheet.create({
     ...Platform.select({
       ios: {
         fontSize: 20,
-        fontFamily: " ",
       },
       android: {
         fontSize: 20,

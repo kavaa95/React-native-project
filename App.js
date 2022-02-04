@@ -22,12 +22,13 @@ import AccountScreen from "./app/Screens/AccountScreen";
 import ListingsScreen from "./app/Screens/ListingsScreen";
 import React, { useState } from "react";
 import AppTextInput from "./app/components/AppTextInput";
-
+import AppPicker from "./app/components/AppPicker";
 export default function App() {
   const [isNew, setIsNew] = useState(false);
   return (
     <Screen>
-      <Switch value={isNew} onValueChange={(newval) => setIsNew(newval)} />
+      <AppPicker placeholder="Category" />
+      <AppTextInput placeholder="email" />
     </Screen>
   );
 }
