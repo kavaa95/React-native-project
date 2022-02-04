@@ -21,11 +21,7 @@ import Screen from "./screen";
 
 function AppPicker({ icon, placeholder, items, selectedItem, onSelectedItem }) {
   const [modalVisible, setModalVisible] = useState(false);
-  const categories = [
-    { label: "Furniture", value: 1 },
-    { label: "Clothing", value: 2 },
-    { label: "Cameras", value: 3 },
-  ];
+
   return (
     <>
       <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
@@ -52,7 +48,7 @@ function AppPicker({ icon, placeholder, items, selectedItem, onSelectedItem }) {
         <Screen>
           <Button title="close" onPress={() => setModalVisible(false)} />
           <FlatList
-            data={categories}
+            data={items}
             keyExtractor={(item) => item.value.toString()}
             renderItem={({ item }) => (
               <PickerItem
