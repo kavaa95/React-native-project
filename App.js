@@ -23,12 +23,19 @@ import ListingsScreen from "./app/Screens/ListingsScreen";
 import React, { useState } from "react";
 import AppTextInput from "./app/components/AppTextInput";
 import AppPicker from "./app/components/AppPicker";
+
 export default function App() {
   const [isNew, setIsNew] = useState(false);
+  const [category, setCategory] = useState();
   return (
     <Screen>
-      <AppPicker placeholder="Category" />
-      <AppTextInput placeholder="email" />
+      <AppPicker
+        selectedItem={category}
+        onSelectedItem={(item) => setCategory(item)}
+        icon="apps"
+        placeholder="Category"
+      />
+      <AppTextInput icon="email" placeholder="email" />
     </Screen>
   );
 }
