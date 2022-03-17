@@ -16,7 +16,7 @@ function ImageInput({ image, onChangeImage }) {
     else
       Alert.alert("Delete", "DELETE FOREVER?", [
         { text: "Yes", onPress: () => onChangeImage(null) },
-        { text: "No" },
+        { text: "No", onPress: () => onChangeImage(null) },
       ]);
   };
   const pickImage = async () => {
