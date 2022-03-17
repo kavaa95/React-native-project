@@ -10,13 +10,13 @@ const Listings = [
     id: 1,
     title: "red jacket for sale",
     price: 100,
-    image: require("../assets/jacket.jpg"),
+    image: require("../assets/favicon.png"),
   },
   {
     id: 2,
     title: "couch in great condition",
     price: 200,
-    image: require("../assets/jacket.jpg"),
+    image: require("../assets/favicon.png"),
   },
 ];
 

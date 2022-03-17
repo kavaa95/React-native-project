@@ -21,13 +21,13 @@ const InitialMessages = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, recusandae.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ad, expedita nobis explicabo eaque eos tempore incidunt odio dolo",
-    image: require("../assets/mosh.jpg"),
+    image: require("../assets/favicon.png"),
   },
   {
     id: 2,
     title: "T2",
     description: "D2",
-    image: require("../assets/mosh.jpg"),
+    image: require("../assets/favicon.png"),
   },
 ];
 
