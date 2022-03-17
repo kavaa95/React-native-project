@@ -28,32 +28,25 @@ import LoginScreen from "./app/Screens/LoginScreen";
 import ListingEditScreen from "./app/Screens/ListingEditScreen";
 import ImageInput from "./app/components/ImageInput";
 import * as ImagePicker from "expo-image-picker";
+import ImageInputList from "./app/components/ImageInputList";
 export default function App() {
-  const [image, setImage] = useState(null);
+  const [imageUris, setImageUris] = useState([]);
 
-  const pickImage = async () => {
-    // No permissions request is necessary for launching the image library
-    let result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.All,
-      allowsEditing: true,
-      aspect: [4, 3],
-      quality: 1,
-    });
+  const handleAdd = (uri) => {
+    setImageUris([...imageUris, uri]);
+  };
 
-    //console.log(result);
-
-    if (!result.cancelled) {
-      setImage(result.uri);
-    }
+  const handleRemove = (uri) => {
+    setImageUris(imageUris.filter((imageUri) => imageUri != uri));
   };
 
   return (
     <Screen>
-      <ImageInput image={image} onChangeImage={(uri) => setImage(uri)} />
-      {/* <Button title="Pick an image from camera roll" onPress={pickImage} />
-      {image && (
-        <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />
-      )} */}
+      <ImageInputList
+        imageUris={imageUris}
+        onAddImage={handleAdd}
+        onRemoveImage={handleRemove}
+      />
     </Screen>
   );
 }
