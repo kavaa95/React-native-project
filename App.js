@@ -7,7 +7,6 @@ import {
   ImageBackground,
   TextInput,
   Switch,
-  Platform,
   Button,
 } from "react-native";
 import ViewImageScreen from "./app/Screens/viewImageScreen";
@@ -22,14 +21,13 @@ import Icon from "./app/components/Icon";
 import ListItem from "./app/components/ListItem";
 import AccountScreen from "./app/Screens/AccountScreen";
 import ListingsScreen from "./app/Screens/ListingsScreen";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AppTextInput from "./app/components/AppTextInput";
 import AppPicker from "./app/components/AppPicker";
 import LoginScreen from "./app/Screens/LoginScreen";
 import ListingEditScreen from "./app/Screens/ListingEditScreen";
-import { useEffect } from "react/cjs/react.production.min";
+import ImageInput from "./app/components/ImageInput";
 import * as ImagePicker from "expo-image-picker";
-
 export default function App() {
   const [image, setImage] = useState(null);
 
@@ -42,7 +40,7 @@ export default function App() {
       quality: 1,
     });
 
-    // console.log(result);
+    //console.log(result);
 
     if (!result.cancelled) {
       setImage(result.uri);
@@ -50,11 +48,12 @@ export default function App() {
   };
 
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Button title="Pick an image from camera roll" onPress={pickImage} />
+    <Screen>
+      <ImageInput image={image} onChangeImage={(uri) => setImage(uri)} />
+      {/* <Button title="Pick an image from camera roll" onPress={pickImage} />
       {image && (
         <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />
-      )}
-    </View>
+      )} */}
+    </Screen>
   );
 }
