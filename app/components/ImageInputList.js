@@ -1,14 +1,18 @@
 import React, { useRef } from "react";
-import { View, StyleSheet, scrollView } from "react-native";
+import { View, StyleSheet, ScrollView } from "react-native";
 import ImageInput from "./ImageInput";
 
 function ImageInputList({ imageUris = [], onRemoveImage, onAddImage }) {
+  const scrollViewRef = useRef();
+
   return (
     <View>
       <ScrollView
-        ref={scrollView}
+        ref={scrollViewRef}
         horizontal
-        onContentSizeChange={() => scrollView.current.scrollToEnd()}
+        onContentSizeChange={() =>
+          scrollViewRef.current.scrollToEnd({ animated: true })
+        }
       >
         <View style={styles.container}>
           {imageUris.map((uri) => (
