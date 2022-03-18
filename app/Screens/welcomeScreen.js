@@ -9,7 +9,7 @@ export default function WelcomeScreen({ navigation }) {
       style={styles.backgroundImage}
     >
       <View style={styles.logoContainer}>
-        <Image source={require("../assets/icon.png")} style={styles.logo} />
+        <Image source={require("../assets/newIcon.jpg")} style={styles.logo} />
         <Text style={styles.tagline}>Text hereeeeee</Text>
       </View>
       <View style={styles.buttonContainer}>
