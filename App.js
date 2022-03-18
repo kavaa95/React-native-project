@@ -34,6 +34,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import AuthNavigator from "./app/navigation/AuthNavigator";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import AppNavigator from "./app/navigation/AppNavigator";
 
 const Tweets = ({ navigation }) => (
   <Screen>
@@ -92,10 +94,15 @@ const TabNavigator = () => (
       inactiveBackground: "black",
       inactiveactiveTintColor: "black",
     }}
-    <Tab.Screen name="Fedd" component={Tweets}
-    options={{
-      tabBarIcon:()=><MaterialCommunityIcons name="home"
-    }} />
+    <Tab.Screen
+      name="Fedd"
+      component={Tweets}
+      options={
+        {
+          // tabBarIcon:()=><MaterialCommunityIcons name="home"
+        }
+      }
+    />
     <Tab.Screen name="Account" component={Account} />
   </Tab.Navigator>
 );
@@ -103,7 +110,7 @@ const TabNavigator = () => (
 export default function App() {
   return (
     <NavigationContainer>
-      <AuthNavigator />
+      <AppNavigator />
     </NavigationContainer>
   );
 }
