@@ -28,11 +28,13 @@ import LoginScreen from "./app/Screens/LoginScreen";
 import ListingEditScreen from "./app/Screens/ListingEditScreen";
 import ImageInput from "./app/components/ImageInput";
 import * as ImagePicker from "expo-image-picker";
+import RegisterScreen from "./app/Screens/RegisterScreen";
 import ImageInputList from "./app/components/ImageInputList";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import AuthNavigator from "./app/navigation/AuthNavigator";
+
 const Tweets = ({ navigation }) => (
   <Screen>
     <Text>Tweets</Text>
@@ -83,8 +85,17 @@ const Account = () => (
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => (
   <Tab.Navigator>
-    tabBarOptions={{}}
-    <Tab.Screen name="Fedd" component={Tweets} />
+    tabBarOptions=
+    {{
+      activeBackgroundColor: "tomato",
+      activeTintColor: "white",
+      inactiveBackground: "black",
+      inactiveactiveTintColor: "black",
+    }}
+    <Tab.Screen name="Fedd" component={Tweets}
+    options={{
+      tabBarIcon:()=><MaterialCommunityIcons name="home"
+    }} />
     <Tab.Screen name="Account" component={Account} />
   </Tab.Navigator>
 );
