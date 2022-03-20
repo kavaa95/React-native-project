@@ -36,13 +36,13 @@ function LoginScreen(props) {
         />
 
         <AppFormField
-          name="password"
           autoCapitalize="none"
           autoCorrect={false}
           icon="lock"
+          name="password"
           placeholder="Password"
           secureTextEntry
-          textContentType="Password"
+          textContentType="password"
         />
         <Image style={styles.logo} source={require("../assets/logo.png")} />
         <SubmitButton title="Login" />
