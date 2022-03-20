@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet, Text, Image } from "react-native";
 import * as Yup from "yup";
 import Screen from "../components/screen";
 
@@ -42,6 +42,7 @@ function RegisterScreen() {
         secureTextEntry
         textContentType="password"
       />
+      <Image style={styles.logo} source={require("../assets/logo.png")} />
       <SubmitButton title="Register" />
     </AppForm>
   );
@@ -50,6 +51,12 @@ function RegisterScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
+  },
+  logo: {
+    width: "70%",
+    height: "40%",
+    alignSelf: "center",
+    marginBottom: 20,
   },
 });
 
