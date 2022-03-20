@@ -1,9 +1,9 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text } from "react-native";
 import * as Yup from "yup";
-
 import Screen from "../components/screen";
-import { Form, FormField, SubmitButton } from "../components/form";
+
+import { AppForm, AppFormField, SubmitButton } from "../components/form";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required().label("Name"),
@@ -13,39 +13,37 @@ const validationSchema = Yup.object().shape({
 
 function RegisterScreen() {
   return (
-    <Screen style={styles.container}>
-      <Form
-        initialValues={{ name: "", email: "", password: "" }}
-        onSubmit={(values) => console.log(values)}
-        validationSchema={validationSchema}
-      >
-        <FormField
-          autoCorrect={false}
-          icon="account"
-          name="name"
-          placeholder="Name"
-        />
-        <FormField
-          autoCapitalize="none"
-          autoCorrect={false}
-          icon="email"
-          keyboardType="email-address"
-          name="email"
-          placeholder="Email"
-          textContentType="emailAddress"
-        />
-        <FormField
-          autoCapitalize="none"
-          autoCorrect={false}
-          icon="lock"
-          name="password"
-          placeholder="Password"
-          secureTextEntry
-          textContentType="password"
-        />
-        <SubmitButton title="Register" />
-      </Form>
-    </Screen>
+    <AppForm
+      initialValues={{ name: "", email: "", password: "" }}
+      onSubmit={(values) => console.log(values)}
+      validationSchema={validationSchema}
+    >
+      <AppFormField
+        autoCorrect={false}
+        icon="account"
+        name="name"
+        placeholder="Name"
+      />
+      <AppFormField
+        autoCapitalize="none"
+        autoCorrect={false}
+        icon="email"
+        keyboardType="email-address"
+        name="email"
+        placeholder="Email"
+        textContentType="emailAddress"
+      />
+      <AppFormField
+        autoCapitalize="none"
+        autoCorrect={false}
+        icon="lock"
+        name="password"
+        placeholder="Password"
+        secureTextEntry
+        textContentType="password"
+      />
+      <SubmitButton title="Register" />
+    </AppForm>
   );
 }
 
