@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   logo: {
-    width: "70%",
-    height: "40%",
+    width: "60%",
+    height: "33%",
     alignSelf: "center",
     marginBottom: 20,
   },

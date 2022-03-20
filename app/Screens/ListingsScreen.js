@@ -8,15 +8,15 @@ import colors from "../config/colors";
 const Listings = [
   {
     id: 1,
-    title: "red jacket for sale",
-    price: 100,
-    image: require("../assets/favicon.png"),
+    title: "Lorem upsum",
+    address: "3120 Ditmars Blvd, Queens, NY 11105",
+    image: require("../assets/donation1.jpg"),
   },
   {
     id: 2,
-    title: "couch in great condition",
-    price: 200,
-    image: require("../assets/favicon.png"),
+    title: "Lorem upsum",
+    address: "3120 Ditmars Blvd, Queens, NY 11105",
+    image: require("../assets/donation2.jpg"),
   },
 ];
 
@@ -29,7 +29,8 @@ function ListingsScreen(props) {
         renderItem={({ item }) => (
           <Card
             title={item.title}
-            subTitle={"$" + item.price}
+            subTitle={item.address}
+            // subTitle={"$" + item.price}
             image={item.image}
           />
         )}
